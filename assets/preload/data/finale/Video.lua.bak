@@ -1,0 +1,12 @@
+local allowCountdown = false
+Video = 1
+
+function onEndSong()
+    if not allowCountdown and not seenCutscene then
+        allowCountdown = true;
+        startVideo('credits')
+        Video = 2
+        return Function_Stop;
+    end
+return Function_Continue;
+end
